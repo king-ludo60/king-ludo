@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludo King - Play Now</title>
+
+<!-- ✅ Social Media Preview (Open Graph) -->
+<meta property="og:title" content="Ludo King - Play Now">
+<meta property="og:description" content="🎙️ Enjoy voice chat with game friend">
+<meta property="og:image" content="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://invite-you.infinityfree.io/">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card Preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ludo King - Play Now">
+<meta name="twitter:description" content="🎙️ Enjoy voice chat with game friend">
+<meta name="twitter:image" content="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+
+<!-- ✅ Favicon -->
+<link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #1a0033, #000010 80%);
+    overflow: hidden;
+    perspective: 1200px;
+  }
+
+  /* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */
+  .glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.25), transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 4s infinite alternate;
+  }
+
+  @keyframes pulse {
+    from { transform: scale(1); opacity: 0.6; }
+    to { transform: scale(1.3); opacity: 1; }
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotateX(0deg); }
+    50% { transform: translateY(-20px) rotateX(5deg); }
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 9vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #ff006e, #ffbe0b, #3a86ff, #8338ec);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientMove 4s ease infinite;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0 25px rgba(255, 0, 110, 0.7));
+    transform: translateZ(60px);
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .subtitle {
+    color: #c0c0ff;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    transform: translateZ(40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .subtitle .mic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    box-shadow: 0 0 15px rgba(255, 0, 110, 0.8);
+    font-size: 1.1rem;
+    animation: micPulse 1.5s infinite;
+  }
+
+  @keyframes micPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(255,0,110,0.8); }
+    50% { transform: scale(1.15); box-shadow: 0 0 30px rgba(131,56,236,1); }
+  }
+
+  /* 3D ডাইস অ্যানিমেশন */
+  .dice-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    transform-style: preserve-3d;
+  }
+
+  .dice {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spinDice 6s linear infinite;
+  }
+
+  .dice:nth-child(2) { animation-delay: -2s; }
+  .dice:nth-child(3) { animation-delay: -4s; }
+
+  @keyframes spinDice {
+    0% { transform: rotateX(0) rotateY(0); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+  .face {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #ffffff, #d0d0d0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff006e;
+    border: 2px solid #ffbe0b;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .front  { transform: translateZ(35px); }
+  .back   { transform: rotateY(180deg) translateZ(35px); }
+  .right  { transform: rotateY(90deg) translateZ(35px); }
+  .left   { transform: rotateY(-90deg) translateZ(35px); }
+  .top    { transform: rotateX(90deg) translateZ(35px); }
+  .bottom { transform: rotateX(-90deg) translateZ(35px); }
+
+  /* 3D প্লে বাটন */
+  .play-btn {
+    position: relative;
+    padding: 20px 70px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: translateZ(50px);
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 0 25px rgba(255, 0, 110, 0.8),
+      0 15px 0 #5a0a2e,
+      0 20px 30px rgba(0,0,0,0.6);
+    animation: btnPulse 2s infinite;
+  }
+
+  @keyframes btnPulse {
+    0%, 100% { box-shadow: 0 0 25px rgba(255,0,110,0.8), 0 15px 0 #5a0a2e, 0 20px 30px rgba(0,0,0,0.6); }
+    50% { box-shadow: 0 0 50px rgba(131,56,236,1), 0 15px 0 #5a0a2e, 0 20px 30px rgba(0,0,0,0.6); }
+  }
+
+  .play-btn:hover {
+    transform: translateZ(70px) scale(1.08);
+    background: linear-gradient(135deg, #8338ec, #ff006e);
+    box-shadow: 
+      0 0 60px rgba(255, 190, 11, 1),
+      0 18px 0 #5a0a2e,
+      0 25px 40px rgba(0,0,0,0.7);
+  }
+
+  .play-btn:active {
+    transform: translateZ(50px) translateY(10px) scale(0.98);
+    box-shadow: 
+      0 0 25px rgba(255, 0, 110, 0.8),
+      0 5px 0 #5a0a2e,
+      0 10px 20px rgba(0,0,0,0.5);
+  }
+
+  /* বাটনের চারপাশে ঘূর্ণায়মান রিং */
+  .ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed rgba(255, 190, 11, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(20px);
+    animation: rotateRing 10s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes rotateRing {
+    from { transform: translate(-50%, -50%) translateZ(20px) rotate(0deg); }
+    to { transform: translate(-50%, -50%) translateZ(20px) rotate(360deg); }
+  }
+
+  /* টোকেন/প্লেয়ার আইকন */
+  .tokens {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    transform: translateZ(30px);
+  }
+
+  .token {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5), inset 0 -5px 10px rgba(0,0,0,0.3);
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+
+  .token:nth-child(1) { background: radial-gradient(circle at 30% 30%, #ff4d6d, #c9184a); animation-delay: 0s; }
+  .token:nth-child(2) { background: radial-gradient(circle at 30% 30%, #4cc9f0, #0077b6); animation-delay: 0.2s; }
+  .token:nth-child(3) { background: radial-gradient(circle at 30% 30%, #ffd60a, #e09f00); animation-delay: 0.4s; }
+  .token:nth-child(4) { background: radial-gradient(circle at 30% 30%, #80ed99, #2d9e4f); animation-delay: 0.6s; }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="glow"></div>
+
+  <div class="container">
+    <h1>LUDO KING</h1>
+    <p class="subtitle">
+      <span class="mic">🎙️</span>
+      Enjoy voice chat with game friend
+    </p>
+
+    <!-- 3D ডাইস -->
+    <div class="dice-wrapper">
+      <div class="dice">
+        <div class="face front">⚀</div>
+        <div class="face back">⚅</div>
+        <div class="face right">⚂</div>
+        <div class="face left">⚃</div>
+        <div class="face top">⚄</div>
+        <div class="face bottom">⚁</div>
+      </div>
+      <div class="dice">
+        <div class="face front">⚅</div>
+        <div class="face back">⚀</div>
+        <div class="face right">⚃</div>
+        <div class="face left">⚂</div>
+        <div class="face top">⚁</div>
+        <div class="face bottom">⚄</div>
+      </div>
+      <div class="dice">
+        <div class="face front">⚂</div>
+        <div class="face back">⚄</div>
+        <div class="face right">⚀</div>
+        <div class="face left">⚅</div>
+        <div class="face top">⚃</div>
+        <div class="face bottom">⚁</div>
+      </div>
+    </div>
+
+    <!-- টোকেন -->
+    <div class="tokens">
+      <div class="token"></div>
+      <div class="token"></div>
+      <div class="token"></div>
+      <div class="token"></div>
+    </div>
+
+    <!-- Play Now বাটন -->
+    <button class="play-btn" onclick="goToGame()">
+      ▶ Play Now
+      <span class="ring"></span>
+    </button>
+  </div>
+
+<script>
+  function goToGame() {
+    // Play Now ক্লিক করলে এই পেজে যাবে
+    window.location.href = "https://invite-you.infinityfree.io/";
+  }
+</script>
+
+</body>
+</html>
