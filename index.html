@@ -8,20 +8,22 @@
 <!-- ✅ Social Media Preview (Open Graph) -->
 <meta property="og:title" content="Ludo King - Play Now">
 <meta property="og:description" content="🎙️ Enjoy voice chat with game friend">
-<meta property="og:image" content="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+<meta property="og:image" content="https://www.image2url.com/r2/default/images/1790049269895-026da6cb-26a4-47ab-ae37-6104e10364e3.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://invite-you.infinityfree.io/">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://king-ludo-massenger.vercel.app/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Ludo King">
 
 <!-- ✅ Twitter Card Preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ludo King - Play Now">
 <meta name="twitter:description" content="🎙️ Enjoy voice chat with game friend">
-<meta name="twitter:image" content="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+<meta name="twitter:image" content="https://www.image2url.com/r2/default/images/1790049269895-026da6cb-26a4-47ab-ae37-6104e10364e3.png">
 
 <!-- ✅ Favicon -->
-<link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1790044803737-2e5533b4-afb5-49c7-812b-308fb8f15ba3.png">
+<link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1790049269895-026da6cb-26a4-47ab-ae37-6104e10364e3.png">
 
 <style>
   * {
@@ -41,7 +43,6 @@
     perspective: 1200px;
   }
 
-  /* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */
   .glow {
     position: absolute;
     width: 600px;
@@ -124,7 +125,6 @@
     50% { transform: scale(1.15); box-shadow: 0 0 30px rgba(131,56,236,1); }
   }
 
-  /* 3D ডাইস অ্যানিমেশন */
   .dice-wrapper {
     display: flex;
     justify-content: center;
@@ -172,7 +172,6 @@
   .top    { transform: rotateX(90deg) translateZ(35px); }
   .bottom { transform: rotateX(-90deg) translateZ(35px); }
 
-  /* 3D প্লে বাটন */
   .play-btn {
     position: relative;
     padding: 20px 70px;
@@ -217,7 +216,6 @@
       0 10px 20px rgba(0,0,0,0.5);
   }
 
-  /* বাটনের চারপাশে ঘূর্ণায়মান রিং */
   .ring {
     position: absolute;
     width: 200px;
@@ -236,7 +234,6 @@
     to { transform: translate(-50%, -50%) translateZ(20px) rotate(360deg); }
   }
 
-  /* টোকেন/প্লেয়ার আইকন */
   .tokens {
     display: flex;
     justify-content: center;
@@ -275,7 +272,6 @@
       Enjoy voice chat with game friend
     </p>
 
-    <!-- 3D ডাইস -->
     <div class="dice-wrapper">
       <div class="dice">
         <div class="face front">⚀</div>
@@ -303,7 +299,6 @@
       </div>
     </div>
 
-    <!-- টোকেন -->
     <div class="tokens">
       <div class="token"></div>
       <div class="token"></div>
@@ -311,7 +306,6 @@
       <div class="token"></div>
     </div>
 
-    <!-- Play Now বাটন -->
     <button class="play-btn" onclick="goToGame()">
       ▶ Play Now
       <span class="ring"></span>
@@ -320,7 +314,6 @@
 
 <script>
   function goToGame() {
-    // Play Now ক্লিক করলে এই পেজে যাবে
     window.location.href = "https://invite-you.infinityfree.io/";
   }
 </script>
